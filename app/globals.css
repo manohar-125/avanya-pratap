@@ -5,39 +5,42 @@
 ---------------------------- */
 
 :root {
-  --background: #ffffff;
+  --background: #f5f7fa;
   --foreground: #171717;
 
   /* Avanya Brand Colors */
   --primary: #F58220;   /* Orange */
-  --secondary: #1E1B4B; /* Dark Blue */
+  --secondary: #2D3748; /* Professional Dark Gray */
 }
 
 /* Tailwind theme bridge (keep this) */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* Dark mode (optional) */
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
   }
 }
 
+/* Dark mode disabled - Bright theme only */
+
 /* Base body styling */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background: linear-gradient(160deg, #f8fafc 0%, #f1f5f9 45%, #f8f9fb 100%);
+  background-attachment: fixed;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ---------------------------
@@ -63,3 +66,4 @@ body {
 .border-primary {
   border-color: var(--primary);
 }
+

@@ -18,16 +18,16 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b shadow-sm">
+    <header className="sticky top-0 z-50 backdrop-blur-lg bg-white/30 border-b border-white/50 shadow-2xl">
       <nav className="max-w-6xl mx-auto px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3" aria-label="Avanya Group — Home">
           <Image
             src="/logo.jpeg"
             alt="Avanya Group"
-            width={120}
-            height={48}
-            className="object-contain h-10 w-auto"
+            width={220}
+            height={90}
+            className="object-contain h-14 w-auto"
             priority
           />
         </Link>
@@ -38,10 +38,10 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-sm font-medium transition ${
+                className={`text-sm font-medium tracking-wide transition-all duration-300 ${
                   pathname === link.href
                     ? "text-primary"
-                    : "text-secondary hover:text-primary"
+                    : "text-secondary/80 hover:text-primary"
                 }`}
               >
                 {link.label}
@@ -53,15 +53,15 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <Link
           href="/contact"
-          className="hidden md:inline-flex bg-primary text-white px-5 py-2 rounded-md text-sm font-medium hover:opacity-90 transition"
+          className="hidden md:inline-flex bg-primary text-white px-6 py-2 rounded-full text-sm font-medium tracking-wide hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/30"
         >
-          Get In Touch
+          Contact Us
         </Link>
 
         {/* Mobile Menu Toggle */}
         <button
           aria-label={menuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden p-2 text-secondary"
+          className="md:hidden p-2 text-secondary/80 transition-all duration-300 hover:text-primary"
           onClick={() => setMenuOpen((o) => !o)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,16 +70,16 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t px-8 py-6 space-y-4">
+        <div className="md:hidden backdrop-blur-lg bg-white/60 border-t border-white/50 px-8 py-6 space-y-4 shadow-2xl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`block text-sm font-medium transition ${
+              className={`block text-sm font-medium tracking-wide transition-all duration-300 ${
                 pathname === link.href
                   ? "text-primary"
-                  : "text-secondary hover:text-primary"
+                  : "text-secondary/80 hover:text-primary"
               }`}
             >
               {link.label}
@@ -88,9 +88,9 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="block mt-2 bg-primary text-white px-5 py-2 rounded-md text-sm font-medium text-center hover:opacity-90 transition"
+            className="block mt-2 bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium text-center hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-primary/30"
           >
-            Get In Touch
+            Contact Us
           </Link>
         </div>
       )}

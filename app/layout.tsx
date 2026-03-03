@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     template: "%s | Avanya Group",
   },
   description:
-    "Avanya Pratap Service and Construction is a trusted government contractor delivering civil, infrastructure, and technical services across Uttar Pradesh.",
+    "Avanya Pratap Service and Construction is a registered government contractor delivering civil infrastructure and public sector services across India.",
   keywords: [
-    "government contractor",
+    "government contractor India",
     "civil construction",
     "infrastructure services",
-    "Uttar Pradesh",
     "government tender",
+    "public sector projects",
     "Avanya Group",
   ],
   authors: [{ name: "Avanya Group" }],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Avanya Pratap Service and Construction",
     description:
-      "Trusted government contractor for civil, infrastructure, and technical services across Uttar Pradesh.",
+      "Registered government contractor for civil infrastructure and public sector project execution across India.",
     url: "https://avanyagroup.in",
     siteName: "Avanya Group",
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Avanya Pratap Service and Construction",
     description:
-      "Trusted government contractor delivering civil, infrastructure, and technical services across Uttar Pradesh.",
+      "Registered government contractor delivering civil infrastructure and public sector services across India.",
     images: ["/logo.jpeg"],
   },
   robots: {

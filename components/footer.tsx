@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-white mt-24">
+    <footer className="bg-[#1C3B70] text-white mt-24 border-t border-white/10">
 
       {/* Top Section */}
       <div className="max-w-6xl mx-auto px-8 py-16 grid md:grid-cols-3 gap-12">
@@ -18,36 +18,36 @@ export default function Footer() {
             height={60}
             className="mb-6"
           />
-          <p className="text-gray-300 text-sm leading-relaxed">
-            Avanya Pratap Service and Construction is a registered
-            government contractor delivering infrastructure,
-            civil, and technical services across multiple departments.
+          <p className="text-blue-100/70 text-sm leading-relaxed">
+                Avanya Pratap Service and Construction is a registered
+                government contractor delivering infrastructure,
+                civil, and technical services across multiple departments.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-6">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-6">
             Quick Links
           </h3>
-          <ul className="space-y-3 text-gray-300">
+          <ul className="space-y-3 text-blue-100/70 text-sm">
             <li>
-              <Link href="/" className="hover:text-primary transition">
+              <Link href="/" className="hover:text-primary transition-all duration-300">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-primary transition">
+              <Link href="/about" className="hover:text-primary transition-all duration-300">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/projects" className="hover:text-primary transition">
+              <Link href="/projects" className="hover:text-primary transition-all duration-300">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-primary transition">
+              <Link href="/contact" className="hover:text-primary transition-all duration-300">
                 Contact
               </Link>
             </li>
@@ -56,15 +56,15 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold mb-6">
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60 mb-6">
             Contact Information
           </h3>
 
-          <div className="space-y-4 text-gray-300 text-sm">
+          <div className="space-y-4 text-blue-100/70 text-sm">
 
             <div className="flex items-start gap-3">
               <Phone size={18} className="text-primary mt-1" />
-              <span>+91 XXXXX XXXXX</span>
+              <span>(+91) 70715 83939,  94150 83939</span>
             </div>
 
             <div className="flex items-start gap-3">
@@ -85,8 +85,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright */}
-      <div className="border-t border-gray-600 text-center py-6 text-sm text-gray-400">
-        © {new Date().getFullYear()} Avanya Group. All Rights Reserved.
+      <div className="border-t border-white/10 text-center py-6 text-xs text-blue-100/40 tracking-wide">
+        &copy; {new Date().getFullYear()} Avanya Group. All Rights Reserved.
       </div>
 
     </footer>
