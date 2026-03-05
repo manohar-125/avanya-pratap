@@ -1,13 +1,24 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
+import { Phone, Mail, MapPin, Loader2, CheckCircle, XCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [notRobot, setNotRobot] = useState(false);
   const [robotError, setRobotError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
+
+  const validatePhone = (value: string) => {
+    if (!value) return ""; // phone is optional
+    const clean = value.replace(/\s+/g, "");
+    const valid = /^(\+91|91|0)?[6-9]\d{9}$/.test(clean);
+    return valid ? "" : "Enter a valid 10-digit Indian mobile number.";
+  };
 
   const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,12 +28,44 @@ export default function Contact() {
       return;
     }
 
-    // Prototype mode only
-    alert("Prototype Mode: Email functionality will be enabled after deployment.");
+    const formEl = form.current!;
+    const phone = (formEl.elements.namedItem("phone") as HTMLInputElement).value;
+    const phoneValidationError = validatePhone(phone);
+    if (phoneValidationError) {
+      setPhoneError(phoneValidationError);
+      return;
+    }
 
-    form.current?.reset();
-    setNotRobot(false);
-    setRobotError(false);
+    setLoading(true);
+    setSuccess(false);
+    setError(false);
+
+    const templateParams = {
+      name: (formEl.elements.namedItem("name") as HTMLInputElement).value,
+      email: (formEl.elements.namedItem("email") as HTMLInputElement).value,
+      phone: phone || "Not provided",
+      message: (formEl.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      console.log("EmailJS success:", result.status, result.text);
+      setSuccess(true);
+      form.current?.reset();
+      setNotRobot(false);
+      setRobotError(false);
+      setPhoneError("");
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -131,9 +174,17 @@ export default function Contact() {
                     id="phone"
                     type="tel"
                     name="phone"
-                    className="w-full backdrop-blur-sm bg-white/60 border border-white/50 rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-primary/30 focus:border-primary/50 focus:outline-none transition-all duration-300 shadow-sm"
+                    onChange={(e) => setPhoneError(validatePhone(e.target.value))}
+                    className={`w-full backdrop-blur-sm bg-white/60 border rounded-xl px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:outline-none transition-all duration-300 shadow-sm ${
+                      phoneError
+                        ? "border-red-400/60 focus:ring-red-300/40 focus:border-red-400/60"
+                        : "border-white/50 focus:ring-primary/30 focus:border-primary/50"
+                    }`}
                     placeholder="+91 XXXXX XXXXX"
                   />
+                  {phoneError && (
+                    <p className="mt-1.5 text-xs text-red-500 font-medium pl-1">{phoneError}</p>
+                  )}
                 </div>
 
                 <div>
@@ -178,6 +229,20 @@ export default function Contact() {
                     </p>
                   )}
                 </div>
+
+                {/* Feedback Messages */}
+                {success && (
+                  <div className="flex items-center gap-2 text-green-600 bg-green-50 border border-green-200 rounded-xl px-4 py-3 text-sm font-medium">
+                    <CheckCircle size={16} className="shrink-0" />
+                    Message sent successfully! We&apos;ll get back to you soon.
+                  </div>
+                )}
+                {error && (
+                  <div className="flex items-center gap-2 text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm font-medium">
+                    <XCircle size={16} className="shrink-0" />
+                    Failed to send message. Please try again or email us directly.
+                  </div>
+                )}
 
                 {/* Submit Button */}
                 <button
