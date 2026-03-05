@@ -39,6 +39,10 @@ const departments = [
     name: "Pradhan Mantri Awas Yojana - Gramin",
     logo: "/departments/pmayg.png",
   },
+  {
+    name: "Directorate of Electrical Safety, Uttar Pradesh",
+    logo: "/departments/directorate of elecrtical safety.png",
+  },
 ];
 
 // Each card: w-72 (288px) + mx-4 on each side (16px * 2 = 32px) = 320px
@@ -93,7 +97,7 @@ export default function DepartmentsCarousel() {
     <section className="py-32 overflow-visible">
       <div className="max-w-6xl mx-auto text-center px-8">
         <div className="inline-block backdrop-blur-lg bg-white/40 border border-white/50 rounded-full px-5 py-2 mb-6 shadow-md">
-          <span className="text-primary font-semibold text-sm tracking-wide">Government Partnerships</span>
+          <span className="text-primary font-semibold text-sm tracking-wide">Proudly Served</span>
         </div>
         <h2 className="text-4xl font-bold text-secondary tracking-tight">
           Departments Worked With

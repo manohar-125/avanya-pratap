@@ -26,7 +26,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="py-28 px-8">
+    <main className="pt-28 pb-10 px-8">
         <div className="max-w-6xl mx-auto">
           {/* Title */}
           <div className="text-center">
@@ -52,7 +52,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-secondary text-sm tracking-wide mb-1">Phone</h3>
-                      <p className="text-gray-500 text-sm">(+91) 70715 83939,  94150 83939</p>
+                      <p className="text-gray-500 text-sm">(+91) 70715 83939,  73555 34189</p>
                     </div>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-secondary text-sm tracking-wide mb-1">Email</h3>
-                      <p className="text-gray-500 text-sm">info@avanyagroup.in</p>
+                      <p className="text-gray-500 text-sm">info@avanyapratap.com, avanya.pratap@gmail.com</p>
                     </div>
                   </div>
                 </div>
@@ -202,7 +202,7 @@ export default function Contact() {
           <div className="mt-16 backdrop-blur-lg bg-white/30 border border-white/50 rounded-2xl overflow-hidden shadow-2xl">
             <iframe
               title="Avanya Group Office Location — Ghazipur, Uttar Pradesh"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1799.4036947666837!2d83.56401534999998!3d25.5780741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991ff0e5c6af5e7%3A0xdaf2422028ee693!2sRamlila%20Maidan%2C%20NH%2029%2C%20Kacheri%2C%20Ghazipur%2C%20Uttar%20Pradesh%20233001!5e0!3m2!1sen!2sin!4v1771961078746!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3598.968011291897!2d83.561543!3d25.572730999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM0JzIxLjgiTiA4M8KwMzMnNDEuNiJF!5e0!3m2!1sen!2sin!4v1772731399509!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}

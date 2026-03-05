@@ -22,14 +22,16 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-8 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3" aria-label="Avanya Group — Home">
-          <Image
-            src="/logo.jpeg"
-            alt="Avanya Group"
-            width={220}
-            height={90}
-            className="object-contain h-14 w-auto"
-            priority
-          />
+          <div className="rounded-full overflow-hidden border-2 border-white/40 shadow-md w-12 h-12 flex items-center justify-center">
+            <Image
+              src="/logo.jpeg"
+              alt="Avanya Group"
+              width={48}
+              height={48}
+              className="object-cover w-full h-full"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Links */}

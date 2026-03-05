@@ -156,32 +156,49 @@ export default function About() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               {
-                name: "Atul Kushwaha",
+                name: "A P Maurya",
                 designation: "Executive Manager",
+                photo: "/leaders/executive_manager.png",
+                photoStyle: { objectPosition: "center 10%" },
                 message:
-                  "At our organization, we are committed to delivering government projects with structured planning, compliance, and accountability. Our focus remains on quality execution and long-term institutional trust.",
+                  "At our organization, we are committed to delivering government projects with structured planning, compliance, and accountability. Our focus remains on quality execution and long-term institutional trust. — Atul Prakash Maurya."
               },
               {
-                name: "Ram Manohar Gupta",
+                name: "R M Gupta",
                 designation: "Operational Manager",
+                photo: "/leaders/operational_manager.jpeg",
+                photoStyle: { objectPosition: "center 10%" },
                 message:
-                  "We ensure systematic coordination and timely execution across all engagements. Our operational framework is designed to maintain efficiency, transparency, and adherence to government standards.",
+                  "We ensure systematic coordination and timely execution across all engagements. Our operational framework is designed to maintain efficiency, transparency, and adherence to government standards. — Ram Manohar Gupta."
               },
               {
-                name: "Shyam Manohar Gupta",
+                name: "S M Gupta",
                 designation: "Technical Head",
+                photo: "/leaders/technical_head.JPG",
+                photoStyle: { objectPosition: "33% center" },
                 message:
-                  "Our technical approach emphasizes precision, compliance, and sustainable implementation. We continuously strengthen our processes to meet evolving public sector requirements.",
+                  "Our technical approach emphasizes precision, compliance, and sustainable implementation. We continuously strengthen our processes to meet evolving public sector requirements. — Shyam Manohar Gupta."
               },
             ].map((leader) => (
               <div key={leader.name} className="group relative">
                 <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-secondary/10 rounded-xl blur-2xl transition-all duration-300 group-hover:blur-3xl"></div>
                 <div className="relative backdrop-blur-lg bg-white/30 border border-white/50 rounded-xl p-6 shadow-lg hover:bg-white/40 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center min-h-[320px]">
-                  {/* Avatar placeholder */}
-                  <div className="w-24 h-24 rounded-full bg-white/50 border-2 border-white/60 shadow-md mb-5 flex items-center justify-center overflow-hidden shrink-0">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <div className="w-5 h-5 rounded-full bg-primary/50"></div>
-                    </div>
+                  {/* Avatar */}
+                  <div className="w-36 h-36 rounded-full bg-white/50 border-2 border-white/60 shadow-md mb-5 flex items-center justify-center overflow-hidden shrink-0">
+                    {leader.photo ? (
+                      <Image
+                        src={leader.photo}
+                        alt={leader.name}
+                        width={144}
+                        height={144}
+                        className="w-full h-full object-cover"
+                        style={leader.photoStyle}
+                      />
+                    ) : (
+                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                        <div className="w-5 h-5 rounded-full bg-primary/50"></div>
+                      </div>
+                    )}
                   </div>
 
                   <h3 className="text-base font-bold text-secondary tracking-tight uppercase">
@@ -192,7 +209,7 @@ export default function About() {
                   </p>
                   <div className="w-8 h-0.5 bg-primary/30 rounded-full mb-4"></div>
                   <p className="text-gray-500 text-sm leading-relaxed flex-1">
-                    &ldquo;{leader.message}&rdquo;
+                    {leader.message}
                   </p>
                 </div>
               </div>

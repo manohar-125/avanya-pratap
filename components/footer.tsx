@@ -11,13 +11,14 @@ export default function Footer() {
 
         {/* Company Info */}
         <div>
-          <Image
-            src="/logo.jpeg"
-            alt="Avanya Group"
-            width={140}
-            height={60}
-            className="mb-6"
-          />
+          <div className="mb-6 inline-block rounded-full border-2 border-white/30 overflow-hidden">
+            <Image
+              src="/logo.jpeg"
+              alt="Avanya Group"
+              width={140}
+              height={60}
+            />
+          </div>
           <p className="text-blue-100/70 text-sm leading-relaxed">
                 Avanya Pratap Service and Construction is a registered
                 government contractor delivering infrastructure,
@@ -64,12 +65,12 @@ export default function Footer() {
 
             <div className="flex items-start gap-3">
               <Phone size={18} className="text-primary mt-1" />
-              <span>(+91) 70715 83939,  94150 83939</span>
+              <span>(+91) 70715 83939,  73555 34189</span>
             </div>
 
             <div className="flex items-start gap-3">
               <Mail size={18} className="text-primary mt-1" />
-              <span>info@avanyagroup.in</span>
+              <span>info@avanyapratap.com, avanya.pratap@gmail.com</span>
             </div>
 
             <div className="flex items-start gap-3">
