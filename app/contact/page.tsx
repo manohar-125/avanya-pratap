@@ -110,7 +110,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-secondary text-sm tracking-wide mb-1">Email</h3>
-                      <p className="text-gray-500 text-sm">info@avanyapratap.com, avanya.pratap@gmail.com</p>
+                      <p className="text-gray-500 text-sm">info@avanyapratap.com</p>
                     </div>
                   </div>
                 </div>

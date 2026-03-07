@@ -94,7 +94,7 @@ export default function DepartmentsCarousel() {
   const translateX = containerWidth / 2 - (current * CARD_WIDTH + CARD_WIDTH / 2);
 
   return (
-    <section className="py-32 overflow-visible">
+    <section className="py-10 md:py-16 lg:py-20 overflow-visible">
       <div className="max-w-6xl mx-auto text-center px-8">
         <div className="inline-block backdrop-blur-lg bg-white/40 border border-white/50 rounded-full px-5 py-2 mb-6 shadow-md">
           <span className="text-primary font-semibold text-sm tracking-wide">Proudly Served</span>
@@ -108,7 +108,7 @@ export default function DepartmentsCarousel() {
           departments with compliance and quality assurance.
         </p>
 
-        <div className="relative mt-20 flex items-center justify-center">
+        <div className="relative mt-10 md:mt-12 flex items-center justify-center">
 
           {/* Left Arrow */}
           <button

@@ -70,7 +70,7 @@ export default function Footer() {
 
             <div className="flex items-start gap-3">
               <Mail size={18} className="text-primary mt-1" />
-              <span>info@avanyapratap.com, avanya.pratap@gmail.com</span>
+              <span>info@avanyapratap.com</span>
             </div>
 
             <div className="flex items-start gap-3">

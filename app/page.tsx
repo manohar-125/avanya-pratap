@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import DepartmentsCarousel from "@/components/DepartmentsCarousel";
 import BrandPartners from "@/components/BrandPartners";
+import OurServices from "@/components/OurServices";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -24,7 +25,7 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-8 py-24 md:py-28">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-24 md:py-28">
           <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
             <div className="text-center md:text-left">
               <div className="inline-block backdrop-blur-lg bg-white/40 border border-white/50 rounded-full px-5 py-2 mb-6 shadow-md">
@@ -48,19 +49,19 @@ export default function Home() {
             <div className="relative w-full max-w-md mx-auto md:mx-0">
               <div className="relative">
                 <div className="absolute inset-0 bg-linear-to-r from-primary/30 to-secondary/30 rounded-3xl blur-2xl"></div>
-                <div className="relative backdrop-blur-lg bg-white/30 border border-white/50 rounded-3xl p-8 shadow-2xl">
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="backdrop-blur-lg bg-white/40 border border-white/50 rounded-2xl p-6 text-center shadow-xl transition-all duration-300 hover:bg-white/50 hover:-translate-y-0.5">
-                      <div className="text-3xl font-bold text-primary mb-1 tracking-tight">140+</div>
-                      <div className="text-xs text-gray-500 font-medium uppercase tracking-wider">Projects Done</div>
+                <div className="relative backdrop-blur-lg bg-white/30 border border-white/50 rounded-3xl p-4 sm:p-8 shadow-2xl">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                    <div className="backdrop-blur-lg bg-white/40 border border-white/50 rounded-2xl p-3 sm:p-6 text-center shadow-xl transition-all duration-300 hover:bg-white/50 hover:-translate-y-0.5 overflow-hidden">
+                      <div className="text-xl sm:text-3xl font-bold text-primary mb-1 tracking-tight">140+</div>
+                      <div className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase leading-tight">Projects Done</div>
                     </div>
-                    <div className="backdrop-blur-lg bg-white/40 border border-white/50 rounded-2xl p-6 text-center shadow-xl transition-all duration-300 hover:bg-white/50 hover:-translate-y-0.5">
-                      <div className="text-3xl font-bold text-primary mb-1 tracking-tight">25+</div>
-                      <div className="text-xs text-gray-500 font-medium uppercase tracking-wider">Departments</div>
+                    <div className="backdrop-blur-lg bg-white/40 border border-white/50 rounded-2xl p-3 sm:p-6 text-center shadow-xl transition-all duration-300 hover:bg-white/50 hover:-translate-y-0.5 overflow-hidden">
+                      <div className="text-xl sm:text-3xl font-bold text-primary mb-1 tracking-tight">25+</div>
+                      <div className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase leading-tight">Departments</div>
                     </div>
-                    <div className="backdrop-blur-lg bg-white/40 border border-white/50 rounded-2xl p-6 text-center shadow-xl transition-all duration-300 hover:bg-white/50 hover:-translate-y-0.5">
-                      <div className="text-3xl font-bold text-primary mb-1 tracking-tight">2024</div>
-                      <div className="text-xs text-gray-500 font-medium uppercase tracking-wider">Founded</div>
+                    <div className="backdrop-blur-lg bg-white/40 border border-white/50 rounded-2xl p-3 sm:p-6 text-center shadow-xl transition-all duration-300 hover:bg-white/50 hover:-translate-y-0.5 overflow-hidden">
+                      <div className="text-xl sm:text-3xl font-bold text-primary mb-1 tracking-tight">2024</div>
+                      <div className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase leading-tight">Founded</div>
                     </div>
                   </div>
                 </div>
@@ -70,10 +71,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SERVICES */}
+      <OurServices />
+
+      {/* DEPARTMENTS */}
+      <DepartmentsCarousel />
+
       {/* STATS */}
-      <section className="py-24">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center mb-16">
+      <section className="py-10 md:py-16 lg:py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <div className="text-center mb-10 md:mb-12">
             <div className="inline-block backdrop-blur-lg bg-white/40 border border-white/50 rounded-full px-5 py-2 mb-5 shadow-md">
               <span className="text-primary font-semibold text-sm tracking-wide">Our Impact</span>
             </div>
@@ -111,9 +118,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* DEPARTMENTS */}
-      <DepartmentsCarousel />
 
       {/* BRAND PARTNERS */}
       <BrandPartners />
