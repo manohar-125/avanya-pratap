@@ -10,28 +10,28 @@ const completedProjects = [
   {
     title: "Rural Engineering Infrastructure",
     department: "Rural Engineering Department",
-    year: "2025",
+    year: "2026",
     description:
       "Delivered with structured planning and inter-department coordination across state rural engineering frameworks.",
   },
   {
     title: "Government Infrastructure Works",
     department: "Rural Development Department, Uttar Pradesh",
-    year: "2024",
+    year: "2025",
     description:
       "Executed with full adherence to government standards and compliance frameworks under national development schemes.",
   },
   {
     title: "Departmental Premises Work",
     department: "Commercial Tax Department, Uttar Pradesh",
-    year: "2024",
+    year: "2025",
     description:
       "Managed through systematic project governance ensuring quality assurance and regulatory compliance throughout.",
   },
   {
     title: "Welfare Infrastructure Works",
     department: "Department of Military Affairs",
-    year: "2024",
+    year: "2025",
     description:
       "Handled with precision and strict adherence to all departmental protocols, quality benchmarks, and timelines.",
   },
@@ -59,7 +59,7 @@ const completedProjects = [
   {
     title: "Rural Housing Mission Works",
     department: "Pradhan Mantri Awas Yojana \u2013 Gramin",
-    year: "2025",
+    year: "2026",
     description:
       "Delivered in strict compliance with national housing mission guidelines, quality assurance protocols, and project deadlines.",
   },
