@@ -29,7 +29,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
             <div className="text-center md:text-left">
               <div className="inline-block backdrop-blur-lg bg-white/40 border border-white/50 rounded-full px-5 py-2 mb-6 shadow-md">
-                <span className="text-primary font-semibold text-sm tracking-wide">Government Contractor Since 2024</span>
+                <span className="text-primary font-semibold text-sm tracking-wide">Government Contractor Since 2025</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold text-secondary tracking-tight leading-tight mb-8">
@@ -60,7 +60,7 @@ export default function Home() {
                       <div className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase leading-tight">Departments</div>
                     </div>
                     <div className="backdrop-blur-lg bg-white/40 border border-white/50 rounded-2xl p-3 sm:p-6 text-center shadow-xl transition-all duration-300 hover:bg-white/50 hover:-translate-y-0.5 overflow-hidden">
-                      <div className="text-xl sm:text-3xl font-bold text-primary mb-1 tracking-tight">2024</div>
+                      <div className="text-xl sm:text-3xl font-bold text-primary mb-1 tracking-tight">2025</div>
                       <div className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase leading-tight">Founded</div>
                     </div>
                   </div>
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="group relative">
               <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-secondary/10 rounded-2xl blur-2xl transition-all duration-300 group-hover:blur-3xl"></div>
               <div className="relative backdrop-blur-lg bg-white/30 border border-white/50 rounded-2xl p-10 text-center shadow-2xl hover:bg-white/40 hover:-translate-y-1 transition-all duration-300">
-                <div className="text-5xl font-bold text-primary mb-2 tracking-tight">2024</div>
+                <div className="text-5xl font-bold text-primary mb-2 tracking-tight">2025</div>
                 <p className="text-gray-600 font-medium text-sm uppercase tracking-wider">Established</p>
                 <div className="mt-5 w-8 h-0.5 bg-primary/40 mx-auto rounded-full"></div>
               </div>

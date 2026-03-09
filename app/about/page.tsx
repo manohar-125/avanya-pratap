@@ -45,7 +45,7 @@ export default function About() {
           <p className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             Avanya Pratap Service and Construction is a registered government
             contractor delivering compliant civil infrastructure and public
-            sector project execution across India since 2024.
+            sector project execution across India since 2025.
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function About() {
                   Who We Are
                 </h2>
                 <p className="text-gray-500 leading-relaxed text-sm flex-1">
-                  Established in 2024, Avanya Pratap Service and Construction is
+                  Established in 2025, Avanya Pratap Service and Construction is
                   a registered government contractor delivering compliant civil
                   infrastructure across multiple central and state departments
                   nationwide. We have been engaged with key infrastructure and
@@ -128,7 +128,7 @@ export default function About() {
                     <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span>
                     <span>
                       Transparent reporting, quality-assured execution, and 140+
-                      completed projects since 2024
+                      completed projects since 2025
                     </span>
                   </li>
                 </ul>
