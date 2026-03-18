@@ -13,6 +13,7 @@ const partners = [
   { name: "Vertiv",   logo: "/brand-partners/vertiv.png" },
   { name: "Wybor",    logo: "/brand-partners/wybor.png" },
   { name: "cp_plus",  logo: "/brand-partners/cp_plus.jpg" },
+  { name: "crompton",  logo: "/brand-partners/crompton.png" },
 ];
 
 export default function BrandPartners() {
