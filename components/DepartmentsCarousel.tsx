@@ -43,6 +43,10 @@ const departments = [
     name: "Directorate of Electrical Safety, Uttar Pradesh",
     logo: "/departments/directorate of elecrtical safety.png",
   },
+  {
+    name: "Empowerment of Persons with Disabilities Department, Uttar Pradesh",
+    logo: "/departments/empowerment_of_persons_with_disabilities_department.png",
+  },
 ];
 
 // Each card: w-72 (288px) + mx-4 on each side (16px * 2 = 32px) = 320px
