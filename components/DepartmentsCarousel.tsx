@@ -45,7 +45,7 @@ const departments = [
   },
   {
     name: "Empowerment of Persons with Disabilities Department, Uttar Pradesh",
-    logo: "/departments/empowerment_of_persons_with_disabilities_department.png",
+    logo: "/departments/Empowerment_of_persons_with_disabilities_department.png",
   },
 ];
 
