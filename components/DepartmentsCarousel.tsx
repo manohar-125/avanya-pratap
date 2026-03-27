@@ -16,6 +16,11 @@ const departments = [
     smallLogo: true,
   },
   {
+    name: "Department of Posts, Government of India",
+    logo: "/departments/indian_post.png",
+    smallLogo: true,
+  },
+  {
     name: "Department of Military Affairs",
     logo: "/departments/military.png",
   },
