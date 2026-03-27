@@ -58,10 +58,32 @@ const completedProjects = [
   },
   {
     title: "Rural Housing Mission Works",
-    department: "Pradhan Mantri Awas Yojana \u2013 Gramin",
+    department: "Pradhan Mantri Awas Yojana – Gramin",
     year: "2026",
     description:
       "Delivered in strict compliance with national housing mission guidelines, quality assurance protocols, and project deadlines.",
+  },
+  {
+    title: "Postal Infrastructure Modernization",
+    department: "Department of Posts, Government of India",
+    year: "2026",
+    description:
+      "Completed facility and service-point upgrades with process discipline, public-service reliability, and execution accuracy.",
+  },
+  {
+    title: "Electrical Safety Compliance Works",
+    department: "Directorate of Electrical Safety, Uttar Pradesh",
+    year: "2026",
+    description:
+      "Delivered inspection-aligned infrastructure works ensuring regulatory compliance, operational safety, and timely handover.",
+  },
+  {
+    title: "Inclusive Access Infrastructure Works",
+    department:
+      "Empowerment of Persons with Disabilities Department, Uttar Pradesh",
+    year: "2026",
+    description:
+      "Executed accessibility-focused development with quality controls to support inclusive public infrastructure outcomes.",
   },
 ];
 
